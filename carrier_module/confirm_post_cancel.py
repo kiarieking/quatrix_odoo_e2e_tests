@@ -41,15 +41,6 @@ class UntitledTestCase(unittest.TestCase):
         self.cancel_posted_or_confirmed_order()
 
         self.reset_to_draft()
-
-        # driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='/'])[1]/following::span[3]").click()
-       
-        # self.confirm_order()
-        # driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Post'])[1]/following::span[1]").click()
-        # driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/following::span[1]").click()
-        # driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='/'])[1]/following::span[3]").click()
-        # driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Post'])[1]/following::span[1]").click()
-        # driver.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='Cancel'])[1]/following::span[1]").click()
     
     def group_orders(self):
         driver = self.driver
