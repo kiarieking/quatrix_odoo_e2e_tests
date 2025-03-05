@@ -50,7 +50,26 @@ class UntitledTestCase(unittest.TestCase):
         self.change_description()
 
         self.change_quantity()
-    
+
+        self.change_cost()
+
+        self.change_date()
+
+    def confirm_changes(self):
+        driver = self.driver
+        element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "action_confirm")))
+        element.click()
+        time.sleep(3)
+
+    def change_date(self):
+        driver = self.driver
+        element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "date")))
+        element.click()
+        time.sleep(1)
+        element.clear()
+        element.send_keys("08/01/2024 00:00:00")
+        time.sleep(3)
+
     def change_quantity(self):
         driver = self.driver
         element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "quantity")))
@@ -58,9 +77,9 @@ class UntitledTestCase(unittest.TestCase):
         element.send_keys("2")
         time.sleep(3)
 
-    def change_carrier_price(self):
+    def change_cost(self):
         driver = self.driver
-        element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "quantity")))
+        element = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "carrier_price")))
         element.clear()
         element.send_keys("100000")
         time.sleep(3)
