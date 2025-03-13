@@ -62,9 +62,12 @@ class UntitledTestCase(unittest.TestCase):
     def complete_delivery_with_proof(self):
         driver = self.driver
         WebDriverWait(driver, 100).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@class, 'o_form_button_edit')]//span[text()='Edit']"))).click()
-        driver.find_element_by_name("ufile").clear()
-        driver.find_element_by_name("ufile").send_keys("C:\\fakepath\\file_example_PNG_500kB.png")
-        driver.find_element_by_xpath("//button[contains(@class, 'o_form_button_save')]//span[text()='Save']").click()
+        # driver.find_element_by_name("ufile").clear()
+        # driver.find_element_by_name("ufile").send_keys("C:\\fakepath\\file_example_PNG_500kB.png")
+        # driver.find_element_by_xpath("//button[contains(@class, 'o_form_button_save')]//span[text()='Save']").click()
+        pod = WebDriverWait(driver, 100).until(EC.element_to_be_clickable((By.XPATH, "//input[@name='pod_upload' and @readonly='readonly']")))
+        pod.send_keys("/home/kkiarie/Downloads/file_example_PNG_500kB.png")
+        WebDriverWait(driver, 100).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@class, 'o_form_button_save')]//span[text()='Save']")))
 
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)

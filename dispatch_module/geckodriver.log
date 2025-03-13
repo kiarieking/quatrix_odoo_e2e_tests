@@ -178,3 +178,73 @@ JavaScript error: , line 0: uncaught exception: undefined
 JavaScript warning: https://migrate.erp.quatrixglobal.com/web/content/16858-498348c/web.assets_common.js, line 1856: Script terminated by timeout at:
 schedule@https://migrate.erp.quatrixglobal.com/web/content/16858-498348c/web.assets_common.js:1856:94
 
+1741858068227	geckodriver	INFO	Listening on 127.0.0.1:41915
+1741858068522	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofile2QmDW5"
+Error: Failed to open Wayland display, fallback to X11. WAYLAND_DISPLAY='wayland-0' DISPLAY=':0'
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741858069156	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741858069341	Marionette	INFO	Listening on port 36207
+Read port: 36207
+1741858069471	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://migrate.erp.quatrixglobal.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://migrate.erp.quatrixglobal.com."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1741858097259	Marionette	INFO	Stopped listening on port 36207
+1741858752676	geckodriver	INFO	Listening on 127.0.0.1:52077
+1741858754079	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofiledGTnHp"
+Error: Failed to open Wayland display, fallback to X11. WAYLAND_DISPLAY='wayland-0' DISPLAY=':0'
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741858754631	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741858754817	Marionette	INFO	Listening on port 38575
+Read port: 38575
+1741858754951	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://migrate.erp.quatrixglobal.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://migrate.erp.quatrixglobal.com."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1741858785667	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1741858887554	Marionette	INFO	Stopped listening on port 38575
+1741859384629	geckodriver	INFO	Listening on 127.0.0.1:36747
+1741859384920	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileiFRXzJ"
+Error: Failed to open Wayland display, fallback to X11. WAYLAND_DISPLAY='wayland-0' DISPLAY=':0'
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741859385542	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741859385736	Marionette	INFO	Listening on port 45471
+Read port: 45471
+1741859385866	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://migrate.erp.quatrixglobal.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://migrate.erp.quatrixglobal.com."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1741859401608	Marionette	INFO	Stopped listening on port 45471
+1741859414807	geckodriver	INFO	Listening on 127.0.0.1:49605
+1741859415119	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilevbUKI4"
+Error: Failed to open Wayland display, fallback to X11. WAYLAND_DISPLAY='wayland-0' DISPLAY=':0'
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741859415654	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741859415813	Marionette	INFO	Listening on port 40543
+Read port: 40543
+1741859415923	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://migrate.erp.quatrixglobal.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://migrate.erp.quatrixglobal.com."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1741859441300	Marionette	INFO	Stopped listening on port 40543
