@@ -36,7 +36,7 @@ class UntitledTestCase(unittest.TestCase):
 
         self.complete_delivery_without_proof()
 
-        # self.complete_delivery_with_proof()
+        self.complete_delivery_with_proof()
 
     def group_dispatch_quotes(self):
         driver = self.driver

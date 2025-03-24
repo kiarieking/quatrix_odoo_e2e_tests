@@ -1378,3 +1378,90 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: http://m
 JavaScript error: , line 0: uncaught exception: undefined
 JavaScript error: , line 0: uncaught exception: undefined
 1741176441517	Marionette	INFO	Stopped listening on port 46593
+1741339595209	geckodriver	INFO	Listening on 127.0.0.1:40543
+1741339595707	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilefAljyf"
+Error: Failed to open Wayland display, fallback to X11. WAYLAND_DISPLAY='wayland-0' DISPLAY=':0'
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741339610844	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741339624730	Marionette	INFO	Listening on port 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+Read port: 44459
+1741339734888	geckodriver	INFO	Listening on 127.0.0.1:57125
+1741339736344	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileIDXBlH"
+Error: Failed to open Wayland display, fallback to X11. WAYLAND_DISPLAY='wayland-0' DISPLAY=':0'
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741339737030	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741339737241	Marionette	INFO	Listening on port 44973
+Read port: 44973
+1741339737296	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://migrate.erp.quatrixglobal.com:8069."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://migrate.erp.quatrixglobal.com:8069."
+1741339742807	Marionette	INFO	Stopped listening on port 44973
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 47: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 47: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1741339742830	geckodriver::marionette	ERROR	Failed to close browser connection: unknown error
+[ERROR glean_core] Can't persist ping lifetime data: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "No such file or directory" })) }
+1741339868412	geckodriver	INFO	Listening on 127.0.0.1:50661
+1741339869797	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofile1O0yzH"
+Error: Failed to open Wayland display, fallback to X11. WAYLAND_DISPLAY='wayland-0' DISPLAY=':0'
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741339870402	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741339870593	Marionette	INFO	Listening on port 39095
+Read port: 39095
+1741339870645	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://migrate.erp.quatrixglobal.com:8069."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://migrate.erp.quatrixglobal.com:8069."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript warning: http://migrate.erp.quatrixglobal.com:8069/web/content/16859-19f395d/web.assets_backend.js, line 2620: Script terminated by timeout at:
+_getColumnWidth@http://migrate.erp.quatrixglobal.com:8069/web/content/16859-19f395d/web.assets_backend.js:2620:144
+_computeDefaultWidths/<@http://migrate.erp.quatrixglobal.com:8069/web/content/16859-19f395d/web.assets_backend.js:2614:453
+_computeDefaultWidths@http://migrate.erp.quatrixglobal.com:8069/web/content/16859-19f395d/web.assets_backend.js:2614:320
+_freezeColumnWidths@http://migrate.erp.quatrixglobal.com:8069/web/content/16859-19f395d/web.assets_backend.js:2618:244
+_renderView/<@http://migrate.erp.quatrixglobal.com:8069/web/content/16859-19f395d/web.assets_backend.js:2643:264
+
+1741339886167	Marionette	INFO	Stopped listening on port 39095
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 47: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: chrome://remote/content/marionette/cert.sys.mjs, line 47: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+1741339886198	geckodriver::marionette	ERROR	Failed to close browser connection: unknown error
+[ERROR glean_core] Can't persist ping lifetime data: Error { kind: Rkv(IoError(Os { code: 2, kind: NotFound, message: "No such file or directory" })) }
+1741339911261	geckodriver	INFO	Listening on 127.0.0.1:47839
+1741339911545	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileZi4nUR"
+Error: Failed to open Wayland display, fallback to X11. WAYLAND_DISPLAY='wayland-0' DISPLAY=':0'
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741339912113	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1741339912282	Marionette	INFO	Listening on port 42455
+Read port: 42455
+1741339912423	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://migrate.erp.quatrixglobal.com:8069."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://migrate.erp.quatrixglobal.com:8069."
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1741339942124	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1741339951547	Marionette	INFO	Stopped listening on port 42455
