@@ -38,6 +38,8 @@ class UntitledTestCase(unittest.TestCase):
 
         self.edit_customer()
 
+        self.save_changes()
+
     def group_dispatch_quotes(self):
         driver = self.driver
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH,"//button[contains(@class, 'o_dropdown_toggler_btn')]//span[@class='o_dropdown_title' and text()='Group By']"))).click()
@@ -65,6 +67,11 @@ class UntitledTestCase(unittest.TestCase):
         new_customer = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//tr[@class='o_data_row' and @data-id='res.partner_13']/td[contains(text(), 'ALEX OGONDA')]")))
         new_customer.click()
         time.sleep(5)
+
+    def save_changes(self):
+        driver = self.driver
+        save_btn = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-primary o_form_button_save' and span[text()='Save']]")))
+        save_btn.click()
 
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
