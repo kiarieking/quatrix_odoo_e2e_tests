@@ -36,7 +36,9 @@ class UntitledTestCase(unittest.TestCase):
 
         self.click_edit_btn()
 
-        self.edit_customer()
+        # self.edit_customer()
+
+        self.edit_vehicle_registration()
 
         self.save_changes()
 
@@ -67,6 +69,18 @@ class UntitledTestCase(unittest.TestCase):
         new_customer = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//tr[@class='o_data_row' and @data-id='res.partner_13']/td[contains(text(), 'ALEX OGONDA')]")))
         new_customer.click()
         time.sleep(5)
+
+    def edit_vehicle_registration(self):
+        driver = self.driver
+        vehicle_input = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME,"vehicle_id")))
+        vehicle_input.click()
+        search_more = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//li[@class='o_m2o_dropdown_option ui-menu-item']/a[text()='Search More...']")))
+        search_more.click()
+        new_vehicle = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//tr[td[@title='KAA015K']]//td//span[text()='Mitsubishi/Mitsubishi']")))
+        new_vehicle.click()
+        time.sleep(5)
+
+    
 
     def save_changes(self):
         driver = self.driver
