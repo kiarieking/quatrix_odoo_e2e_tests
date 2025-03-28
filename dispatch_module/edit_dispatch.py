@@ -34,9 +34,9 @@ class UntitledTestCase(unittest.TestCase):
        
         self.open_dispatch_quote()
 
-        self.complete_delivery_without_proof()
+        self.click_edit_btn()
 
-        self.complete_delivery_with_proof()
+        self.edit_customer()
 
     def group_dispatch_quotes(self):
         driver = self.driver
@@ -52,25 +52,19 @@ class UntitledTestCase(unittest.TestCase):
         element.click()
         time.sleep(5)
 
-    def complete_delivery(self):
-        driver = self.driver
-        WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.NAME, "action_confirm"))).click()
-
-    def complete_delivery_without_proof(self):
-        driver = self.driver
-        self.complete_delivery()
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//div[@class='o_dialog_warning modal-body']")))
-
-    def complete_delivery_with_proof(self):
+    def click_edit_btn(self):
         driver = self.driver
         WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@class, 'o_form_button_edit')]//span[text()='Edit']"))).click()
-        # driver.find_element_by_name("ufile").clear()
-        # driver.find_element_by_name("ufile").send_keys("C:\\fakepath\\file_example_PNG_500kB.png")
-        # driver.find_element_by_xpath("//button[contains(@class, 'o_form_button_save')]//span[text()='Save']").click()
-        WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Upload your file')]"))).click()
-        pod = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//input[@name='pod_upload' and @readonly='readonly']")))
-        pod.send_keys("/home/kkiarie/Downloads/file_example_PNG_500kB.png")
-        WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[contains(@class, 'o_form_button_save')]//span[text()='Save']")))
+
+    def edit_customer(self):
+        driver = self.driver
+        customer_input = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME,"partner_id")))
+        customer_input.click()
+        search_more = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//li[@class='o_m2o_dropdown_option ui-menu-item']/a[text()='Search More...']")))
+        search_more.click()
+        new_customer = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//tr[@class='o_data_row' and @data-id='res.partner_13']/td[contains(text(), 'ALEX OGONDA')]")))
+        new_customer.click()
+        time.sleep(5)
 
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
