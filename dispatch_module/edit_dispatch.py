@@ -36,9 +36,15 @@ class UntitledTestCase(unittest.TestCase):
 
         self.click_edit_btn()
 
-        # self.edit_customer()
+        self.edit_customer()
 
         self.edit_vehicle_registration()
+
+        self.edit_dispatch_date()
+
+        # self.edit_delivery_date()
+
+        # self.add_product_line()
 
         self.save_changes()
 
@@ -74,13 +80,37 @@ class UntitledTestCase(unittest.TestCase):
         driver = self.driver
         vehicle_input = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME,"vehicle_id")))
         vehicle_input.click()
-        search_more = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//li[@class='o_m2o_dropdown_option ui-menu-item']/a[text()='Search More...']")))
+        search_more = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//li[@class='o_m2o_dropdown_option ui-menu-item']/a[text()='Search More...']")))
         search_more.click()
         new_vehicle = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//tr[td[@title='KAA015K']]//td//span[text()='Mitsubishi/Mitsubishi']")))
         new_vehicle.click()
         time.sleep(5)
 
-    
+    def edit_dispatch_date(self):
+        driver = self.driver
+        dispatch_date = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "date_dispatch")))
+        dispatch_date.click()
+        specific_date = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//td[text()="4"]')))
+        specific_date.click()
+        time.sleep(5)
+
+    def edit_delivery_date(self):
+        driver = self.driver
+        delivery_date = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "date_delivery")))
+        delivery_date.click()
+        specific_date = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,'//td[text()="6"]')))
+        specific_date.click()
+        time.sleep(5)
+
+    def add_product_line(self):
+        driver = self.driver
+        add_line = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//td[@class='o_field_x2many_list_row_add']/a[text()='Add a line']")))
+        add_line.click()
+        product_input = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//div[@class='o_input_dropdown']/input")))
+        product_input.send_keys("[HACO] Embakasi-Updated MERU 7T")
+        time.sleep(5)
+
+
 
     def save_changes(self):
         driver = self.driver
