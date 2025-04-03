@@ -7,6 +7,14 @@
 
     pip install selenium 
 
+### Ensure you have Python 3.6+ installed or use a virtual environment with python3.6+ installed. To check:
+
+    python3 --version
+
+### Install gecko-driver
+
+    sudo apt install firefox-geckodriver
+
 ### On the terminal Change-Directory (cd) into one of the directories :
 
     cd carrier_module
