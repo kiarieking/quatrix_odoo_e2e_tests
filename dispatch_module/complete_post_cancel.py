@@ -44,6 +44,8 @@ class UntitledTestCase(unittest.TestCase):
         
         self.open_dispatch_quote()
 
+        self.complete_delivery()
+        
         time.sleep(10)
 
     def group_dispatch_quotes(self):
@@ -61,6 +63,12 @@ class UntitledTestCase(unittest.TestCase):
         element = WebDriverWait(driver,100).until(EC.element_to_be_clickable((By.XPATH, "(.//*[normalize-space(text()) and normalize-space(.)='DO9357'])[1]/following::td[1]")))
         element.click()
         time.sleep(5)
+
+    def complete_delivery(self):
+        driver = self.driver
+        complete_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "action_confirm")))
+        complete_btn.click()
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located)
 
     
     def is_element_present(self, how, what):
