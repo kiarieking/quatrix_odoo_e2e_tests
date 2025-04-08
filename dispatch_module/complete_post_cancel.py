@@ -45,7 +45,9 @@ class UntitledTestCase(unittest.TestCase):
         self.open_dispatch_quote()
 
         self.complete_delivery()
-        
+
+        self.post_delivey()
+
         time.sleep(10)
 
     def group_dispatch_quotes(self):
@@ -68,7 +70,16 @@ class UntitledTestCase(unittest.TestCase):
         driver = self.driver
         complete_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "action_confirm")))
         complete_btn.click()
-        WebDriverWait(driver, 10).until(EC.presence_of_element_located)
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME,"action_post")))
+
+    def post_delivey(self):
+        driver = self.driver
+        post_btn = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.NAME, "action_post")))
+        post_btn.click()
+        time.sleep(5)
+        status = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH, "//button[@data-value='posted']")))
+        title = status.get_attribute('title')
+        assert title == "Current state"
 
     
     def is_element_present(self, how, what):
