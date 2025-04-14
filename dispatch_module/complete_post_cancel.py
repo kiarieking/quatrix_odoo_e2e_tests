@@ -46,13 +46,16 @@ class UntitledTestCase(unittest.TestCase):
 
         self.complete_delivery()
 
-        self.post_delivey()
+        self.post_delivery()
+
+        self.cancel_reset_to_draft()
 
         time.sleep(10)
 
     def group_dispatch_quotes(self):
         driver = self.driver
         group_by = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH,"//button[contains(@class, 'o_dropdown_toggler_btn')]//span[@class='o_dropdown_title' and text()='Group By']")))
+        time.sleep(2)
         group_by.click()
         time.sleep(1)
         status = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[@aria-checked='false' and @role='menuitemcheckbox' and text()='Status']")))
@@ -72,7 +75,7 @@ class UntitledTestCase(unittest.TestCase):
         complete_btn.click()
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME,"action_post")))
 
-    def post_delivey(self):
+    def post_delivery(self):
         driver = self.driver
         post_btn = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.NAME, "action_post")))
         post_btn.click()
@@ -80,6 +83,27 @@ class UntitledTestCase(unittest.TestCase):
         status = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH, "//button[@data-value='posted']")))
         title = status.get_attribute('title')
         assert title == "Current state"
+
+    def cancel_reset_to_draft(self):
+        driver = self.driver
+        cancel_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "action_cancel")))
+        cancel_btn.click()
+        time.sleep(3)
+        status = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH, "//button[@data-value='cancel']")))
+        title = status.get_attribute('title')
+        assert title == "Current state"
+        reset_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "action_reset")))
+        reset_btn.click()
+        time.sleep(3)
+        status = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH, "//button[@data-value='draft']")))
+        title = status.get_attribute('title')
+        assert title == "Current state"
+
+        
+
+
+
+
 
     
     def is_element_present(self, how, what):
