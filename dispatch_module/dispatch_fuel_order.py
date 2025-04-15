@@ -36,6 +36,8 @@ class UntitledTestCase(unittest.TestCase):
 
         self.open_fuel_order()
 
+        self.create_fuel_order()
+
     def group_dispatch_quotes(self):
         driver = self.driver
         group_by = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH,"//button[contains(@class, 'o_dropdown_toggler_btn')]//span[@class='o_dropdown_title' and text()='Group By']")))
@@ -57,6 +59,42 @@ class UntitledTestCase(unittest.TestCase):
         driver = self.driver
         fuelorder_btn = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.NAME, "fuel_voucher_count")))
         fuelorder_btn.click()
+        time.sleep(3)
+
+    def create_fuel_order(self):
+        driver = self.driver
+        lpo_number = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "lpo_voucher_number")))
+        lpo_number.clear()
+        lpo_number.send_keys("test123")
+        driver_phone_number = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "driver_phone_number")))
+        driver_phone_number.clear()
+        driver_phone_number.send_keys("0723122233")
+        add_line = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[@href="#" and @role="button" and normalize-space(text())="Add a line"]')))
+        add_line.click()
+        time.sleep(5)
+        product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '(//div[contains(@class, "o_input_dropdown") and input[not(@id)]])[1]')))
+        product.click()
+        select_product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@class, "ui-menu-item-wrapper") and normalize-space(text())="[FUEL] Diesel"]')))
+        select_product.click()
+        description = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "description")))
+        description.click()
+        description.send_keys("test description")
+        narration = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "narration")))
+        narration.click()
+        narration.send_keys("test narration")
+        quantity = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "quantity")))
+        quantity.click()
+        quantity.send_keys('125')
+        unit_price = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "price_unit")))
+        unit_price.click()
+        unit_price.send_keys('5')
+        time.sleep(3)
+        save_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//div[contains(@class, "modal")]//button[contains(@class, "o_form_button_save") and .//span[normalize-space(text())="Save"]]')))
+        save_btn.click()
+
+
+
+
         time.sleep(3)
 
 
