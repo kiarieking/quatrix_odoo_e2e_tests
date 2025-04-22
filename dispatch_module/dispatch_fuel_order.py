@@ -41,9 +41,11 @@ class UntitledTestCase(unittest.TestCase):
 
         self.open_dispatch_quote()
 
-        self.open_fuel_order()
+        # self.open_fuel_order()
 
-        self.create_fuel_order()
+        # self.create_fuel_order()
+
+        self.fuel_order_smart_button()
 
     def group_dispatch_quotes(self):
         driver = self.driver
@@ -99,6 +101,13 @@ class UntitledTestCase(unittest.TestCase):
         save_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//div[contains(@class, "modal")]//button[contains(@class, "o_form_button_save") and .//span[normalize-space(text())="Save"]]')))
         save_btn.click()
 
+    def fuel_order_smart_button(self):
+        driver = self.driver
+        smart_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//div[@name='fuel_voucher_count' and contains(@class, 'o_field_widget')]")))
+        smart_btn.click()
+        fuel_order = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//td[text()='FO3333']")))
+        fuel_order_no = fuel_order.get_attribute("title")
+        assert fuel_order_no == "FO3333"
 
 
 
