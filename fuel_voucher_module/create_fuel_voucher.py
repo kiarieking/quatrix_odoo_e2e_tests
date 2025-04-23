@@ -54,7 +54,17 @@ class UntitledTestCase(unittest.TestCase):
         search_more.click()
         pick_vehicle = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//tr[@class='o_data_row' and @data-id='fleet.vehicle_42']/td[@title='KAA703C' and text()='KAA703C']")))
         pick_vehicle.click()
-
+        lpo_number = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "lpo_voucher_number")))
+        lpo_number.clear()
+        lpo_number.send_keys("test123")
+        driver_number = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "driver_phone_number")))
+        driver_number.clear()
+        driver_number.send_keys("254112291144")
+        driver_number = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "driver_phone_number")))
+        add_line = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[@role='button' and normalize-space(text())='Add a line']")))
+        add_line.click()
+        product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "product_id")))
+        product.click()
         time.sleep(5)
 
 

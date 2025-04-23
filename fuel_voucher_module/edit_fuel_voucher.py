@@ -36,6 +36,17 @@ class UntitledTestCase(unittest.TestCase):
         fuel_voucher_btn.click()
         time.sleep(5)
 
+        self.group_vouchers_by_status()
+
+    def group_vouchers_by_status(self):
+        driver = self.driver
+        groupBy_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@type='button' and contains(@class, 'o_dropdown_toggler_btn') and .//span[text()='Group By']]")))
+        groupBy_btn.click()
+        status = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//li[@role='menuitem' and contains(@class, 'o_menu_item')]/a[@role='menuitemcheckbox' and text()='Status']")))
+        status.click()
+        time.sleep(5)
+
+
         
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
