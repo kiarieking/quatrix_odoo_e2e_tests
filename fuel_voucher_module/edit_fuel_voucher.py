@@ -53,7 +53,7 @@ class UntitledTestCase(unittest.TestCase):
         driver = self.driver
         fuel_order_grp = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//th[@class='o_group_name' and contains(., 'Quotation (311)')]")))
         fuel_order_grp.click()
-        fuel_order = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//td[@class='o_data_cell o_field_cell o_list_char o_readonly_modifier o_required_modifier' and text()='FO3331']")))
+        fuel_order = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//td[@class='o_data_cell o_field_cell o_list_char o_readonly_modifier o_required_modifier' and text()='FO3321']")))
         fuel_order.click()
 
     def edit_fuel_voucher(self):

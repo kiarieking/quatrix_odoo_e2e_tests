@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from selenium.webdriver.firefox.options import Options
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -11,7 +12,8 @@ import unittest, time, re
 
 class UntitledTestCase(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        options = Options()
+        self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4444', options=options)
         self.driver.implicitly_wait(30)
         self.base_url = "https://www.google.com/"
         self.verificationErrors = []
@@ -43,7 +45,7 @@ class UntitledTestCase(unittest.TestCase):
 
         # self.open_fuel_order()
 
-        # self.create_fuel_order()
+        self.create_fuel_order()
 
         self.fuel_order_smart_button()
 

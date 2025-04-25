@@ -67,6 +67,9 @@ class UntitledTestCase(unittest.TestCase):
         else:
             print("status is " + str(title))
 
+    def post_fuel_voucher(self):
+        driver = self.driver
+        
         
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)
