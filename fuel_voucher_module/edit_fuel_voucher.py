@@ -51,16 +51,55 @@ class UntitledTestCase(unittest.TestCase):
 
     def open_fuel_voucher(self):
         driver = self.driver
-        fuel_order_grp = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//th[@class='o_group_name' and text()[contains(., 'Fuel Order (12)')]]")))
+        fuel_order_grp = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//th[@class='o_group_name' and contains(., 'Quotation (311)')]")))
         fuel_order_grp.click()
-        fuel_order = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//td[@class='o_data_cell o_field_cell o_list_char o_readonly_modifier o_required_modifier' and text()='FO3326']")))
+        fuel_order = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//td[@class='o_data_cell o_field_cell o_list_char o_readonly_modifier o_required_modifier' and text()='FO3331']")))
         fuel_order.click()
 
     def edit_fuel_voucher(self):
         driver = self.driver
         edit_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@type='button' and contains(@class, 'o_form_button_edit') and contains(., 'Edit')]")))
         edit_btn.click()
+        vehicle = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//div[contains(@class, 'o_input_dropdown')]//input[contains(@class, 'o_input') and contains(@class, 'ui-autocomplete-input')]")))
+        vehicle.click()
+        search_more = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[contains(@class, 'ui-menu-item-wrapper') and text()='Search More...']")))
+        search_more.click()
+        pick_vehicle = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//tr[@class='o_data_row' and @data-id='fleet.vehicle_42']/td[@title='KAA703C' and text()='KAA703C']")))
+        pick_vehicle.click()
+        lpo_number = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "lpo_voucher_number")))
+        lpo_number.clear()
+        lpo_number.send_keys("test123 edit")
+        driver_number = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "driver_phone_number")))
+        driver_number.clear()
+        driver_number.send_keys("254122291144")
+        driver_number = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "driver_phone_number")))
+        add_line = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[@role='button' and normalize-space(text())='Add a line']")))
+        add_line.click()
+        product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "product_id")))
+        product.click()
+        select_product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//a[contains(@class, "ui-menu-item-wrapper") and normalize-space(text())="[FUEL] Diesel"]')))
+        select_product.click()
+        description = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "description")))
+        description.click()
+        description.clear()
+        description.send_keys("test edit description")
+        narration = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "narration")))
+        narration.click()
+        narration.clear()
+        narration.send_keys("test edit narration")
+        quantity = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "quantity")))
+        quantity.click()
+        quantity.clear()
+        quantity.send_keys('135')
+        unit_price = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "price_unit")))
+        unit_price.click()
+        unit_price.clear()
+        unit_price.send_keys('5')
+        time.sleep(3)
+        save_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-primary o_form_button_save' and @type='button' and @accesskey='s']")))
+        save_btn.click()
         time.sleep(5)
+       
 
 
      
