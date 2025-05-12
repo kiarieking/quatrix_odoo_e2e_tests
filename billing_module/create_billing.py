@@ -72,8 +72,10 @@ class UntitledTestCase(unittest.TestCase):
         product_input.click()
         product = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//li[@class='ui-menu-item']//a[@class='ui-menu-item-wrapper' and text()='[FUEL] Ksm-Petrol']")))
         product.click()
-        description = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "name")))
+        description = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//input[@class='o_field_char o_field_widget o_input' and @name='name' and @type='text']")))
         description.click()
+        time.sleep(5)
+        description.clear()
         description.send_keys("test description")
         notes = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "notes")))
         notes.click()
@@ -82,6 +84,8 @@ class UntitledTestCase(unittest.TestCase):
         quantity.send_keys("5")
         unit_price = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "price_unit")))
         unit_price.send_keys("10")
+        save_btn = WebDriverWait(driver,10).until(EC.element_to_be_clickable((By.XPATH, "//button[span[normalize-space(text())='Save'] and i[contains(@class, 'fa-floppy-o')]]")))
+        save_btn.click()
         time.sleep(5)
 
 
