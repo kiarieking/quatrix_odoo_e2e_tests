@@ -54,6 +54,12 @@ class UntitledTestCase(unittest.TestCase):
         select_end_date.click()
         carrier = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "carrier_id")))
         carrier.click()
+        select_carrier = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//a[@class='ui-menu-item-wrapper' and text()='ABDULAHI WALAIKA']")))
+        select_carrier.click()
+        generate_rpt_btn =WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-primary' and span[text()='Generate Report']]")))
+        generate_rpt_btn.click()
+        user_error_modal = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//div[@class='modal-content']//h4[@class='modal-title' and contains(text(), 'User Error')]")))
+        assert user_error_modal.is_displayed
         time.sleep(5)
 
     def is_element_present(self, how, what):
